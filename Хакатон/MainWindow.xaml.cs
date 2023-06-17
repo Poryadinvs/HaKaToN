@@ -32,37 +32,48 @@ namespace Хакатон
             userPage UP = new userPage();
             AdminPage AP = new AdminPage();
 
-            try
+            if(LoginA.Text == "user")
             {
-                var userObj = AppConnect.model0db.Users.FirstOrDefault(x => x.Login == LoginA.Text && x.Password == PasswordA.Password);
-                if (userObj == null)
-                {
-                    MessageBox.Show("Такого пользователя нет!", "Ошибка при авторизации!",
-                        MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                else
-                {
-                    switch (userObj.idRole)
-                    {
-                        case 1:
-                            AP.Show();
-                            this.Hide();
-                            break;
-                        case 2:
-                            UP.Show();
-                            this.Hide();
-                            break;
-                        default:
-                            MessageBox.Show("Данные не обнаружены!", "Уведомления", MessageBoxButton.OK, MessageBoxImage.Warning);
-                            break;
-                    }
-                }
-            }
-            catch (Exception Ex)
+                UP.Show();
+                this.Hide();
+            }    
+            else if(LoginA.Text == "admin")
             {
-                MessageBox.Show("Ошибка" + Ex.Message.ToString() + "Критическая работа приложения",
-                    "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
+                AP.Show();
+                this.Hide();
             }
+
+            //try
+            //{
+            //    var userObj = AppConnect.model0db.Users.FirstOrDefault(x => x.Login == LoginA.Text && x.Password == PasswordA.Password);
+            //    if (userObj == null)
+            //    {
+            //        MessageBox.Show("Такого пользователя нет!", "Ошибка при авторизации!",
+            //            MessageBoxButton.OK, MessageBoxImage.Error);
+            //    }
+            //    else
+            //    {
+            //        switch (userObj.idRole)
+            //        {
+            //            case 1:
+            //                AP.Show();
+            //                this.Hide();
+            //                break;
+            //            case 2:
+            //                UP.Show();
+            //                this.Hide();
+            //                break;
+            //            default:
+            //                MessageBox.Show("Данные не обнаружены!", "Уведомления", MessageBoxButton.OK, MessageBoxImage.Warning);
+            //                break;
+            //        }
+            //    }
+            //}
+            //catch (Exception Ex)
+            //{
+            //    MessageBox.Show("Ошибка" + Ex.Message.ToString() + "Критическая работа приложения",
+            //        "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
+            //}
         }
 
         private void RegButton_Click(object sender, RoutedEventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace Хакатон
     /// </summary>
     public partial class AdminHPanel : Window
     {
+        ImageBrush pic = new ImageBrush();
         public AdminHPanel()
         {
             InitializeComponent();
@@ -26,7 +28,17 @@ namespace Хакатон
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
+        }
+        //pic.ImageSource = new BitmapImage(new Uri("C:\\Users\\karin\\Source\\Repos\\HaKaToN\\Хакатон\\Resources\\h1.png"));
+        //hp.PicBorder.Background = pic;
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            string FW = openFile.FileName; 
+            pic.ImageSource = new BitmapImage(new Uri(FW)); 
+            AdminHPanel AHP = new AdminHPanel();
+            AHP.PicBorder.Background = pic; 
         }
     }
 }

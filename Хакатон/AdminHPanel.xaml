@@ -70,8 +70,10 @@
     <Grid>
         <Button x:Name="BClose" Style="{DynamicResource CloseButton}" Width="18" Height="18" Margin="102,-207,130,639" RenderTransformOrigin="-0.667,0.574" Background="Aqua" Content="X" Foreground="Red" Click="Button_Click"/>
         <Border x:Name="PicBorder" Width="230" Height="140" BorderThickness="1" CornerRadius="5" BorderBrush="Aqua" Margin="10,35,10,275">
+            <Button Margin="0,0,1,1" Background="Transparent" BorderBrush="Transparent" Click="Button_Click_1">
+            </Button>
             <Border.Background>
-                <ImageBrush x:Name="hPic">
+                <ImageBrush x:Name="AhPic">
                 </ImageBrush>
             </Border.Background>
         </Border>

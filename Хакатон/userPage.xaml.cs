@@ -21,7 +21,6 @@ namespace Хакатон
     public partial class userPage : Window
     {
         ImageBrush pic = new ImageBrush();
-        bool wOpen = false;
         Building building = new Building();
         public userPage()
         {
@@ -32,7 +31,7 @@ namespace Хакатон
         {
             hPage hp = new hPage();
             hp.Show();
-            pic.ImageSource = new BitmapImage(new Uri("D:\\Влад\\ДОМАХА\\WPF\\Хакатон\\Хакатон\\Resources\\h1.png"));
+            pic.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Resources/h1.png"));
             hp.PicBorder.Background = pic;
 
             hp.t1.Text = building.Name = "Дом1";
@@ -42,7 +41,7 @@ namespace Хакатон
         {
             hPage hp = new hPage();
             hp.Show();
-            pic.ImageSource = new BitmapImage(new Uri("D:\\Влад\\ДОМАХА\\WPF\\Хакатон\\Хакатон\\Resources\\h2.png"));
+            pic.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Resources/h2.png"));
 
             hp.PicBorder.Background = pic;
         }
@@ -51,7 +50,7 @@ namespace Хакатон
         {
             hPage hp = new hPage();
             hp.Show();
-            pic.ImageSource = new BitmapImage(new Uri("D:\\Влад\\ДОМАХА\\WPF\\Хакатон\\Хакатон\\Resources\\h3.png"));
+            pic.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Resources/h3.png"));
 
             hp.PicBorder.Background = pic;
         }
@@ -60,7 +59,7 @@ namespace Хакатон
         {
             hPage hp = new hPage();
             hp.Show();
-            pic.ImageSource = new BitmapImage(new Uri("D:\\Влад\\ДОМАХА\\WPF\\Хакатон\\Хакатон\\Resources\\h4.png"));
+            pic.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Resources/h4.png"));
 
             hp.PicBorder.Background = pic;
         }
@@ -69,7 +68,7 @@ namespace Хакатон
         {
             hPage hp = new hPage();
             hp.Show();
-            pic.ImageSource = new BitmapImage(new Uri("D:\\Влад\\ДОМАХА\\WPF\\Хакатон\\Хакатон\\Resources\\h5.png"));
+            pic.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Resources/h5.png"));
 
             hp.PicBorder.Background = pic;
         }
@@ -78,7 +77,7 @@ namespace Хакатон
         {
             hPage hp = new hPage();
             hp.Show();
-            pic.ImageSource = new BitmapImage(new Uri("D:\\Влад\\ДОМАХА\\WPF\\Хакатон\\Хакатон\\Resources\\h6.png"));
+            pic.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Resources/h6.png"));
 
             hp.PicBorder.Background = pic;
         }
@@ -87,7 +86,7 @@ namespace Хакатон
         {
             hPage hp = new hPage();
             hp.Show();
-            pic.ImageSource = new BitmapImage(new Uri("D:\\Влад\\ДОМАХА\\WPF\\Хакатон\\Хакатон\\Resources\\h7.png"));
+            pic.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Resources/h7.png"));
 
             hp.PicBorder.Background = pic;
         }
@@ -96,7 +95,7 @@ namespace Хакатон
         {
             hPage hp = new hPage();
             hp.Show();
-            pic.ImageSource = new BitmapImage(new Uri("D:\\Влад\\ДОМАХА\\WPF\\Хакатон\\Хакатон\\Resources\\h8.png"));
+            pic.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Resources/h8.png"));
 
             hp.PicBorder.Background = pic;
         }
@@ -105,7 +104,7 @@ namespace Хакатон
         {
             hPage hp = new hPage();
             hp.Show();
-            pic.ImageSource = new BitmapImage(new Uri("D:\\Влад\\ДОМАХА\\WPF\\Хакатон\\Хакатон\\Resources\\h9.png"));
+            pic.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Resources/h9.png"));
 
             hp.PicBorder.Background = pic;
         }
@@ -114,7 +113,7 @@ namespace Хакатон
         {
             hPage hp = new hPage();
             hp.Show();
-            pic.ImageSource = new BitmapImage(new Uri("D:\\Влад\\ДОМАХА\\WPF\\Хакатон\\Хакатон\\Resources\\h10.png"));
+            pic.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Resources/h10.png"));
 
             hp.PicBorder.Background = pic;
         }

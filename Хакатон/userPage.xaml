@@ -70,7 +70,7 @@
         <Canvas Width="120" Height="150" Margin="20,33,658,250" Background="Aqua">
             <Button Style="{DynamicResource ButtonBuild1}" x:Name="Build1" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build1_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="D:\Влад\ДОМАХА\WPF\Хакатон\Хакатон\Resources\h1.png" />
+                    <ImageBrush ImageSource="Resources\h1.png" />
                 </Button.Background>
             </Button>
             <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
@@ -80,7 +80,7 @@
         <Canvas Width="120" Height="150" Margin="180,33,498,250" Background="Aqua">
             <Button Style="{DynamicResource ButtonBuild1}" x:Name="Build2" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build2_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="D:\Влад\ДОМАХА\WPF\Хакатон\Хакатон\Resources\h2.png" />
+                    <ImageBrush ImageSource="Resources\h2.png" />
                 </Button.Background>
             </Button>
             <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
@@ -90,7 +90,7 @@
         <Canvas Width="120" Height="150" Margin="340,33,338,250" Background="Aqua">
             <Button Style="{DynamicResource ButtonBuild1}" x:Name="Build3" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build3_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="D:\Влад\ДОМАХА\WPF\Хакатон\Хакатон\Resources\h3.png" />
+                    <ImageBrush ImageSource="Resources\h3.png" />
                 </Button.Background>
             </Button>
                 <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
@@ -100,7 +100,7 @@
         <Canvas Width="120" Height="150" Margin="500,33,178,250" Background="Aqua">
             <Button Style="{DynamicResource ButtonBuild1}" x:Name="Build4" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build4_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="D:\Влад\ДОМАХА\WPF\Хакатон\Хакатон\Resources\h4.png" />
+                    <ImageBrush ImageSource="Resources\h4.png" />
                 </Button.Background>
             </Button>
             <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
@@ -110,7 +110,7 @@
         <Canvas Width="120" Height="150" Margin="660,33,18,250" Background="Aqua">
             <Button Style="{DynamicResource ButtonBuild1}" x:Name="Build5" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build5_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="D:\Влад\ДОМАХА\WPF\Хакатон\Хакатон\Resources\h5.png" />
+                    <ImageBrush ImageSource="Resources\h5.png" />
                 </Button.Background>
             </Button>
             <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
@@ -120,7 +120,7 @@
         <Canvas Width="120" Height="150" Margin="20,232,658,51" Background="Aqua">
             <Button Style="{DynamicResource ButtonBuild1}" x:Name="Build6" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build6_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="D:\Влад\ДОМАХА\WPF\Хакатон\Хакатон\Resources\h6.png" />
+                    <ImageBrush ImageSource="Resources\h6.png" />
                 </Button.Background>
             </Button>
             <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
@@ -130,7 +130,7 @@
         <Canvas Width="120" Height="150" Margin="180,232,498,51" Background="Aqua">
             <Button Style="{DynamicResource ButtonBuild1}" x:Name="Build7" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build7_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="D:\Влад\ДОМАХА\WPF\Хакатон\Хакатон\Resources\h7.png" />
+                    <ImageBrush ImageSource="Resources\h7.png" />
                 </Button.Background>
             </Button>
             <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
@@ -140,7 +140,7 @@
         <Canvas Width="120" Height="150" Margin="340,232,338,51" Background="Aqua">
             <Button Style="{DynamicResource ButtonBuild1}" x:Name="Build8" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build8_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="D:\Влад\ДОМАХА\WPF\Хакатон\Хакатон\Resources\h8.png" />
+                    <ImageBrush ImageSource="C:\Users\karin\Source\Repos\HaKaToN\Хакатон\Resources\h8.png" />
                 </Button.Background>
             </Button>
             <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
@@ -150,7 +150,7 @@
         <Canvas Width="120" Height="150" Margin="500,232,178,51" Background="Aqua">
             <Button Style="{DynamicResource ButtonBuild1}" x:Name="Build9" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build9_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="D:\Влад\ДОМАХА\WPF\Хакатон\Хакатон\Resources\h9.png" />
+                    <ImageBrush ImageSource="Resources\h9.png" />
                 </Button.Background>
             </Button>
             <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
@@ -160,7 +160,7 @@
         <Canvas Width="120" Height="150" Margin="661,232,17,51" Background="Aqua">
             <Button Style="{DynamicResource ButtonBuild1}" x:Name="Build10" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build10_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="D:\Влад\ДОМАХА\WPF\Хакатон\Хакатон\Resources\h10.png" />
+                    <ImageBrush ImageSource="Resources\h10.png" />
                 </Button.Background>
             </Button>
             <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
