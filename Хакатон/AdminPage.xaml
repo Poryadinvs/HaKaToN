@@ -6,7 +6,166 @@
         xmlns:local="clr-namespace:Хакатон"
         mc:Ignorable="d"
         Title="AdminPage" Height="450" Width="800">
-    <Grid>
-        
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonBuild1" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" CornerRadius="5">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Opacity" Value="0.9"/>
+                                <Setter Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="1.05" ScaleY="1.05" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="433" Width="798">
+        <Canvas Width="120" Height="150" Margin="20,33,658,250" Background="Aqua">
+            <Button Style="{DynamicResource ButtonBuild1}" x:Name="ABuild1" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build1_Click">
+                <Button.Background>
+                    <ImageBrush x:Name="hPicButton1" />
+                </Button.Background>
+            </Button>
+            <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
+                <TextBox Margin="0,1,-1,1" Background="Transparent" BorderBrush="Transparent">название дома1</TextBox>
+            </Border>
+        </Canvas>
+        <Canvas Width="120" Height="150" Margin="180,33,498,250" Background="Aqua">
+            <Button Style="{DynamicResource ButtonBuild1}" x:Name="ABuild2" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build2_Click">
+                <Button.Background>
+                    <ImageBrush x:Name="hPicButton2" />
+                </Button.Background>
+            </Button>
+            <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
+                <TextBox Margin="0,1,-1,1" Background="Transparent" BorderBrush="Transparent">название дома2</TextBox>
+            </Border>
+        </Canvas>
+        <Canvas Width="120" Height="150" Margin="340,33,338,250" Background="Aqua">
+            <Button Style="{DynamicResource ButtonBuild1}" x:Name="ABuild3" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build3_Click">
+                <Button.Background>
+                    <ImageBrush x:Name="hPicButton3" />
+                </Button.Background>
+            </Button>
+            <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
+                <TextBox Margin="0,1,-1,1" Background="Transparent" BorderBrush="Transparent">название дома3</TextBox>
+            </Border>
+        </Canvas>
+        <Canvas Width="120" Height="150" Margin="500,33,178,250" Background="Aqua">
+            <Button Style="{DynamicResource ButtonBuild1}" x:Name="ABuild4" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build4_Click">
+                <Button.Background>
+                    <ImageBrush x:Name="hPicButton4" />
+                </Button.Background>
+            </Button>
+            <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
+                <TextBox Margin="0,1,-1,1" Background="Transparent" BorderBrush="Transparent">название дома4</TextBox>
+            </Border>
+        </Canvas>
+        <Canvas Width="120" Height="150" Margin="660,33,18,250" Background="Aqua">
+            <Button Style="{DynamicResource ButtonBuild1}" x:Name="ABuild5" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build5_Click">
+                <Button.Background>
+                    <ImageBrush x:Name="hPicButton5" />
+                </Button.Background>
+            </Button>
+            <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
+                <TextBox Margin="0,1,-1,1" Background="Transparent" BorderBrush="Transparent">название дома5</TextBox>
+            </Border>
+        </Canvas>
+        <Canvas Width="120" Height="150" Margin="20,232,658,51" Background="Aqua">
+            <Button Style="{DynamicResource ButtonBuild1}" x:Name="ABuild6" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build6_Click">
+                <Button.Background>
+                    <ImageBrush x:Name="hPicButton6" />
+                </Button.Background>
+            </Button>
+            <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
+                <TextBox Margin="0,1,-1,1" Background="Transparent" BorderBrush="Transparent">название дома6</TextBox>
+            </Border>
+        </Canvas>
+        <Canvas Width="120" Height="150" Margin="180,232,498,51" Background="Aqua">
+            <Button Style="{DynamicResource ButtonBuild1}" x:Name="ABuild7" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build7_Click">
+                <Button.Background>
+                    <ImageBrush x:Name="hPicButton7" />
+                </Button.Background>
+            </Button>
+            <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
+                <TextBox Margin="0,1,-1,1" Background="Transparent" BorderBrush="Transparent">название дома7</TextBox>
+            </Border>
+        </Canvas>
+        <Canvas Width="120" Height="150" Margin="340,232,338,51" Background="Aqua">
+            <Button Style="{DynamicResource ButtonBuild1}" x:Name="ABuild8" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build8_Click">
+                <Button.Background>
+                    <ImageBrush x:Name="hPicButton8" />
+                </Button.Background>
+            </Button>
+            <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
+                <TextBox Margin="0,1,-1,1" Background="Transparent" BorderBrush="Transparent">название дома8</TextBox>
+            </Border>
+        </Canvas>
+        <Canvas Width="120" Height="150" Margin="500,232,178,51" Background="Aqua">
+            <Button Style="{DynamicResource ButtonBuild1}" x:Name="ABuild9" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build9_Click">
+                <Button.Background>
+                    <ImageBrush x:Name="hPicButton9" />
+                </Button.Background>
+            </Button>
+            <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
+                <TextBox Margin="0,1,-1,1" Background="Transparent" BorderBrush="Transparent">название дома9</TextBox>
+            </Border>
+        </Canvas>
+        <Canvas Width="120" Height="150" Margin="661,232,17,51" Background="Aqua">
+            <Button Style="{DynamicResource ButtonBuild1}" x:Name="ABuild10" Height="85" Width="100" HorizontalAlignment="Center" Canvas.Left="11" VerticalAlignment="Top" Canvas.Top="8" Click="Build10_Click">
+                <Button.Background>
+                    <ImageBrush x:Name="hPicButton10" />
+                </Button.Background>
+            </Button>
+            <Border Height="30" Width="100" BorderThickness="1" Canvas.Left="11" Canvas.Top="102" CornerRadius="5" BorderBrush="#FF707070">
+                <TextBox Margin="0,1,-1,1" Background="Transparent" BorderBrush="Transparent">название дома10</TextBox>
+            </Border>
+        </Canvas>
     </Grid>
 </Window>

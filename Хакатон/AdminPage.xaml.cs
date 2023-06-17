@@ -23,5 +23,55 @@ namespace Хакатон
         {
             InitializeComponent();
         }
+
+        private void Build1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Build2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Build3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Build4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Build5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Build6_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Build7_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Build8_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Build9_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Build10_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
