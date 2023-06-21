@@ -19,7 +19,7 @@ namespace Хакатон
         public int Flats { get; set; }
         public string Material { get; set; }
         public int CudNum { get; set; }
-        public double Square { get; set; }
-        public int PopleCount { get; set;}
+        public int Square { get; set; }
+        public int PepleCount { get; set;}
     }
 }

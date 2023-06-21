@@ -9,7 +9,7 @@
          WindowStyle="None"
         AllowsTransparency="True"
         ResizeMode="NoResize"
-        Height="450" Width="250">
+        Height="518" Width="250">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -67,15 +67,16 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
-        <Button x:Name="BClose" Style="{DynamicResource CloseButton}" Width="18" Height="18" Margin="102,-207,130,639" RenderTransformOrigin="-0.667,0.574" Background="Aqua" Content="X" Foreground="Red" Click="Button_Click"/>
-        <Border x:Name="PicBorder" Width="230" Height="140" BorderThickness="1" CornerRadius="5" BorderBrush="Aqua" Margin="10,35,10,275">
+    <Grid Margin="0,0,0,-51">
+        <Button x:Name="BClose" Style="{DynamicResource CloseButton}" Width="18" Height="18" Margin="107,-206,125,757" RenderTransformOrigin="-0.667,0.574" Background="Aqua" Content="X" Foreground="Red" Click="Button_Click"/>
+        <Border x:Name="PicBorder" Width="230" Height="140" BorderThickness="1" CornerRadius="5" BorderBrush="Aqua" Margin="10,39,10,390">
             <Border.Background>
                 <ImageBrush x:Name="hPic">
                 </ImageBrush>
             </Border.Background>
         </Border>
         <StackPanel Height="NaN" Margin="13,179,12,7" Width="NaN">
+            <Label Content="Класс сдание"/>
             <ComboBox>
                 <TextBlock x:Name="t1"/>
                 <TextBlock x:Name="t2"/>
@@ -89,11 +90,13 @@
                 <TextBlock x:Name="t10"/>
                 <TextBlock x:Name="t11"/>
             </ComboBox>
+            <Label Content="Журнал (логирование задания)"/>
             <ComboBox>
                 <TextBlock x:Name="t12"/>
                 <TextBlock x:Name="t13"/>
                 <TextBlock x:Name="t14"/>
             </ComboBox>
+            <Label Content="Журнал проведения работ"/>
             <ComboBox>
                 <TextBlock x:Name="t15"/>
                 <TextBlock x:Name="t16"/>
@@ -102,14 +105,23 @@
                 <TextBlock x:Name="t19"/>
                 <TextBlock x:Name="t20"/>
             </ComboBox>
+            <Label Content="Информация о сдании"/>
             <ComboBox>
                 <TextBlock x:Name="t21"/>
             </ComboBox>
+            <Label Content="Журнал нарушений"/>
             <ComboBox>
                 <TextBlock x:Name="t22"/>
                 <TextBlock x:Name="t23"/>
+                <TextBlock x:Name="t24"/>
+            </ComboBox>
+            <Label Content="Пользователи"/>
+            <ComboBox>
                 <TextBlock x:Name="t25"/>
                 <TextBlock x:Name="t26"/>
+                <TextBlock x:Name="t27"/>
+                <TextBlock x:Name="t29"/>
+                <TextBlock x:Name="t30"/>
             </ComboBox>
         </StackPanel>
     </Grid>
