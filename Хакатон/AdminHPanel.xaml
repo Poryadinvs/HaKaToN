@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Хакатон"
-  mc:Ignorable="d"
-        Height="905" Width="697">
+        mc:Ignorable="d"
+        Title="AdminHPanel" Height="450" Width="800">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -25,7 +25,7 @@
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-        <Style x:Key="CloseButton" TargetType="{x:Type Button}">
+        <Style x:Key="SaveButto" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
             <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
@@ -37,7 +37,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" CornerRadius="5" RenderTransformOrigin="-1.861,-8.667" Margin="122,217,-122,-217">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" CornerRadius="5">
                             <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -63,15 +63,16 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
-        <Border x:Name="PicBorder" Width="230" Height="140" BorderThickness="1" CornerRadius="5" BorderBrush="Aqua" Margin="236,10,236,518">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="800">
+        <Button Style="{DynamicResource SaveButto}" x:Name="SaveButoon" Content="Сохранить" Margin="426,80,201,0" Height="56" VerticalAlignment="Top" Background="AliceBlue" BorderBrush="Aqua" BorderThickness="4" Click="SaveButoon_Click"/>
+        <Border x:Name="PicBorder" BorderThickness="1" CornerRadius="5" BorderBrush="AliceBlue"  Margin="29,32,400,217">
             <Border.Background>
                 <ImageBrush x:Name="AhPic">
                 </ImageBrush>
             </Border.Background>
         </Border>
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <StackPanel Height="NaN" Margin="13,179,12,7" Width="NaN">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,266,0,10">
+            <StackPanel Height="850" Margin="0,1,0,10" Width="NaN">
                 <Label Content="Класс сдание"/>
                 <TextBox x:Name="At1"/>
                 <TextBox x:Name="At2"/>
@@ -83,31 +84,26 @@
                 <TextBox x:Name="At8"/>
                 <TextBox x:Name="At9"/>
                 <TextBox x:Name="At10"/>
-                <TextBox x:Name="At11"/>
                 <Label Content="Журнал (логирование задания)"/>
+                <TextBox x:Name="At11"/>
                 <TextBox x:Name="At12"/>
                 <TextBox x:Name="At13"/>
-                <TextBox x:Name="At14"/>
                 <Label Content="Журнал проведения работ"/>
+                <TextBox x:Name="At14"/>
                 <TextBox x:Name="At15"/>
                 <TextBox x:Name="At16"/>
                 <TextBox x:Name="At17"/>
                 <TextBox x:Name="At18"/>
                 <TextBox x:Name="At19"/>
-                <TextBox x:Name="At20"/>
                 <Label Content="Информация о сдании"/>
-                <TextBox x:Name="At21"/>
+                <TextBox x:Name="At20"/>
                 <Label Content="Журнал нарушений"/>
+                <TextBox x:Name="At21"/>
                 <TextBox x:Name="At22"/>
                 <TextBox x:Name="At23"/>
-                <TextBox x:Name="At24"/>
                 <Label Content="Пользователи"/>
+                <TextBox x:Name="At24"/>
                 <TextBox x:Name="At25"/>
-                <TextBox x:Name="At26"/>
-                <TextBox x:Name="At27"/>
-                <TextBox x:Name="At28"/>
-                <TextBox x:Name="At29"/>
-                <TextBox x:Name="At30"/>
             </StackPanel>
         </ScrollViewer>
     </Grid>

@@ -26,7 +26,7 @@ namespace Хакатон
         }
 
         ImageBrush pic = new ImageBrush();
-        OpenFileDialog openFile = new OpenFileDialog();
+        public OpenFileDialog openFile = new OpenFileDialog();
         string fw;
 
 
@@ -45,6 +45,7 @@ namespace Хакатон
                 AHP.PicBorder.Background = AHP.AhPic; 
                 hPicButton1.ImageSource = new BitmapImage(new Uri(fw));
             }
+
 
         }
 
