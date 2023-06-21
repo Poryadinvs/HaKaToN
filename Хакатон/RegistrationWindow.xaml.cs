@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Хакатон.ApplicationData;
 using System.Data.SqlClient;
+using StackExchange.Redis;
+
 namespace Хакатон
 {
     /// <summary>
@@ -46,13 +48,14 @@ namespace Хакатон
 
             try
             {
-               User userObj = new User();
+                Users userObj = new Users()
                 {
-                    userObj.Login = LoginR.Text;
-                    userObj.Name = NameR.Text;
-                    userObj.Password = PasswordR.Password;
-                    userObj.idRole = 2;
+                    Login = LoginR.Text,
+                    Password = PasswordR.Password,
+                    Name = NameR.Text,
+                    idRole = +1 
                 };
+
                 AppConnect.model0db.Users.Add(userObj);
                 AppConnect.model0db.SaveChanges();
 

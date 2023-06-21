@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls.Primitives;
 
 namespace Хакатон.ApplicationData
 {
     internal class AppConnect
     {
-        public static HakatonUsersEntities model0db;
+        public static HakatonUsersEntities5 model0db;
+        public static HakatonBuildInfoEntities3 model1db; 
+
     }
 }

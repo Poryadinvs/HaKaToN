@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище HakatonBuildInfoModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HakatonBuildInfo.dbo.ABuidingInfo" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="ABuidingInfo">
+          <Key>
+            <PropertyRef Name="BuildingPic" />
+            <PropertyRef Name="BuildingInfo" />
+          </Key>
+          <Property Name="BuildingPic" Type="image" Nullable="false" />
+          <Property Name="BuildingInfo" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HakatonBuildInfo.dbo.ABuilding" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="ABuilding">
+          <Key>
+            <PropertyRef Name="BuildinName" />
+            <PropertyRef Name="Adres" />
+            <PropertyRef Name="yearBuld" />
+            <PropertyRef Name="State" />
+            <PropertyRef Name="FloorsCount" />
+            <PropertyRef Name="FlatsCount" />
+            <PropertyRef Name="Material" />
+            <PropertyRef Name="CudNum" />
+            <PropertyRef Name="Square" />
+            <PropertyRef Name="PeopleCount" />
+          </Key>
+          <Property Name="BuildinName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="yearBuld" Type="date" Nullable="false" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FloorsCount" Type="int" Nullable="false" />
+          <Property Name="FlatsCount" Type="int" Nullable="false" />
+          <Property Name="Material" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CudNum" Type="int" Nullable="false" />
+          <Property Name="Square" Type="int" Nullable="false" />
+          <Property Name="PeopleCount" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HakatonBuildInfo.dbo.AJournal" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="AJournal">
+          <Key>
+            <PropertyRef Name="ADate" />
+            <PropertyRef Name="Comment" />
+            <PropertyRef Name="FIOEmpl" />
+          </Key>
+          <Property Name="ADate" Type="date" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="FIOEmpl" Type="nvarchar" MaxLength="80" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HakatonBuildInfo.dbo.AJournalViolations" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="AJournalViolations">
+          <Key>
+            <PropertyRef Name="ADate" />
+            <PropertyRef Name="Task" />
+            <PropertyRef Name="Resons" />
+          </Key>
+          <Property Name="ADate" Type="date" Nullable="false" />
+          <Property Name="Task" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Resons" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HakatonBuildInfo.dbo.AUser" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="AUser">
+          <Key>
+            <PropertyRef Name="FIOUser" />
+            <PropertyRef Name="JobTitel" />
+          </Key>
+          <Property Name="FIOUser" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="JobTitel" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HakatonBuildInfo.dbo.AWorkJournal" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="AWorkJournal">
+          <Key>
+            <PropertyRef Name="ADate" />
+            <PropertyRef Name="Task" />
+            <PropertyRef Name="Dedlines" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="Comment" />
+            <PropertyRef Name="Quality" />
+          </Key>
+          <Property Name="ADate" Type="date" Nullable="false" />
+          <Property Name="Task" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="Dedlines" Type="date" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Quality" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Хранилище HakatonBuildInfoModelContainer">
+          <EntitySet Name="ABuidingInfo" EntityType="Self.ABuidingInfo" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ABuidingInfo].[BuildingPic] AS [BuildingPic], 
+    [ABuidingInfo].[BuildingInfo] AS [BuildingInfo]
+    FROM [dbo].[ABuidingInfo] AS [ABuidingInfo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ABuilding" EntityType="Self.ABuilding" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ABuilding].[BuildinName] AS [BuildinName], 
+    [ABuilding].[Adres] AS [Adres], 
+    [ABuilding].[yearBuld] AS [yearBuld], 
+    [ABuilding].[State] AS [State], 
+    [ABuilding].[FloorsCount] AS [FloorsCount], 
+    [ABuilding].[FlatsCount] AS [FlatsCount], 
+    [ABuilding].[Material] AS [Material], 
+    [ABuilding].[CudNum] AS [CudNum], 
+    [ABuilding].[Square] AS [Square], 
+    [ABuilding].[PeopleCount] AS [PeopleCount]
+    FROM [dbo].[ABuilding] AS [ABuilding]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AJournal" EntityType="Self.AJournal" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AJournal].[ADate] AS [ADate], 
+    [AJournal].[Comment] AS [Comment], 
+    [AJournal].[FIOEmpl] AS [FIOEmpl]
+    FROM [dbo].[AJournal] AS [AJournal]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AJournalViolations" EntityType="Self.AJournalViolations" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AJournalViolations].[ADate] AS [ADate], 
+    [AJournalViolations].[Task] AS [Task], 
+    [AJournalViolations].[Resons] AS [Resons]
+    FROM [dbo].[AJournalViolations] AS [AJournalViolations]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AUser" EntityType="Self.AUser" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AUser].[FIOUser] AS [FIOUser], 
+    [AUser].[JobTitel] AS [JobTitel]
+    FROM [dbo].[AUser] AS [AUser]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AWorkJournal" EntityType="Self.AWorkJournal" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AWorkJournal].[ADate] AS [ADate], 
+    [AWorkJournal].[Task] AS [Task], 
+    [AWorkJournal].[Dedlines] AS [Dedlines], 
+    [AWorkJournal].[Status] AS [Status], 
+    [AWorkJournal].[Comment] AS [Comment], 
+    [AWorkJournal].[Quality] AS [Quality]
+    FROM [dbo].[AWorkJournal] AS [AWorkJournal]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HakatonBuildInfoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ABuidingInfo">
+          <Key>
+            <PropertyRef Name="BuildingPic" />
+            <PropertyRef Name="BuildingInfo" />
+          </Key>
+          <Property Name="BuildingPic" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="BuildingInfo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ABuilding">
+          <Key>
+            <PropertyRef Name="BuildinName" />
+            <PropertyRef Name="Adres" />
+            <PropertyRef Name="yearBuld" />
+            <PropertyRef Name="State" />
+            <PropertyRef Name="FloorsCount" />
+            <PropertyRef Name="FlatsCount" />
+            <PropertyRef Name="Material" />
+            <PropertyRef Name="CudNum" />
+            <PropertyRef Name="Square" />
+            <PropertyRef Name="PeopleCount" />
+          </Key>
+          <Property Name="BuildinName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="yearBuld" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FloorsCount" Type="Int32" Nullable="false" />
+          <Property Name="FlatsCount" Type="Int32" Nullable="false" />
+          <Property Name="Material" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CudNum" Type="Int32" Nullable="false" />
+          <Property Name="Square" Type="Int32" Nullable="false" />
+          <Property Name="PeopleCount" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AJournal">
+          <Key>
+            <PropertyRef Name="ADate" />
+            <PropertyRef Name="Comment" />
+            <PropertyRef Name="FIOEmpl" />
+          </Key>
+          <Property Name="ADate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Comment" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FIOEmpl" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AJournalViolations">
+          <Key>
+            <PropertyRef Name="ADate" />
+            <PropertyRef Name="Task" />
+            <PropertyRef Name="Resons" />
+          </Key>
+          <Property Name="ADate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Task" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resons" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AUser">
+          <Key>
+            <PropertyRef Name="FIOUser" />
+            <PropertyRef Name="JobTitel" />
+          </Key>
+          <Property Name="FIOUser" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="JobTitel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AWorkJournal">
+          <Key>
+            <PropertyRef Name="ADate" />
+            <PropertyRef Name="Task" />
+            <PropertyRef Name="Dedlines" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="Comment" />
+            <PropertyRef Name="Quality" />
+          </Key>
+          <Property Name="ADate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Task" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dedlines" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Quality" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="HakatonBuildInfoEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ABuidingInfo" EntityType="Self.ABuidingInfo" />
+          <EntitySet Name="ABuilding" EntityType="Self.ABuilding" />
+          <EntitySet Name="AJournal" EntityType="Self.AJournal" />
+          <EntitySet Name="AJournalViolations" EntityType="Self.AJournalViolations" />
+          <EntitySet Name="AUser" EntityType="Self.AUser" />
+          <EntitySet Name="AWorkJournal" EntityType="Self.AWorkJournal" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище HakatonBuildInfoModelContainer" CdmEntityContainer="HakatonBuildInfoEntities3">
+          <EntitySetMapping Name="ABuidingInfo">
+            <EntityTypeMapping TypeName="HakatonBuildInfoModel.ABuidingInfo">
+              <MappingFragment StoreEntitySet="ABuidingInfo">
+                <ScalarProperty Name="BuildingPic" ColumnName="BuildingPic" />
+                <ScalarProperty Name="BuildingInfo" ColumnName="BuildingInfo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ABuilding">
+            <EntityTypeMapping TypeName="HakatonBuildInfoModel.ABuilding">
+              <MappingFragment StoreEntitySet="ABuilding">
+                <ScalarProperty Name="BuildinName" ColumnName="BuildinName" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="yearBuld" ColumnName="yearBuld" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="FloorsCount" ColumnName="FloorsCount" />
+                <ScalarProperty Name="FlatsCount" ColumnName="FlatsCount" />
+                <ScalarProperty Name="Material" ColumnName="Material" />
+                <ScalarProperty Name="CudNum" ColumnName="CudNum" />
+                <ScalarProperty Name="Square" ColumnName="Square" />
+                <ScalarProperty Name="PeopleCount" ColumnName="PeopleCount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AJournal">
+            <EntityTypeMapping TypeName="HakatonBuildInfoModel.AJournal">
+              <MappingFragment StoreEntitySet="AJournal">
+                <ScalarProperty Name="ADate" ColumnName="ADate" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="FIOEmpl" ColumnName="FIOEmpl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AJournalViolations">
+            <EntityTypeMapping TypeName="HakatonBuildInfoModel.AJournalViolations">
+              <MappingFragment StoreEntitySet="AJournalViolations">
+                <ScalarProperty Name="ADate" ColumnName="ADate" />
+                <ScalarProperty Name="Task" ColumnName="Task" />
+                <ScalarProperty Name="Resons" ColumnName="Resons" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AUser">
+            <EntityTypeMapping TypeName="HakatonBuildInfoModel.AUser">
+              <MappingFragment StoreEntitySet="AUser">
+                <ScalarProperty Name="FIOUser" ColumnName="FIOUser" />
+                <ScalarProperty Name="JobTitel" ColumnName="JobTitel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AWorkJournal">
+            <EntityTypeMapping TypeName="HakatonBuildInfoModel.AWorkJournal">
+              <MappingFragment StoreEntitySet="AWorkJournal">
+                <ScalarProperty Name="ADate" ColumnName="ADate" />
+                <ScalarProperty Name="Task" ColumnName="Task" />
+                <ScalarProperty Name="Dedlines" ColumnName="Dedlines" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Quality" ColumnName="Quality" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

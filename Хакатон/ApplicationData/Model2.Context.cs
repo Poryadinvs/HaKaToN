@@ -13,10 +13,10 @@ namespace Хакатон.ApplicationData
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class HakatonUsersEntities5 : DbContext
+    public partial class HakatonBuildInfoEntities3 : DbContext
     {
-        public HakatonUsersEntities5()
-            : base("name=HakatonUsersEntities5")
+        public HakatonBuildInfoEntities3()
+            : base("name=HakatonBuildInfoEntities3")
         {
         }
     
@@ -25,8 +25,11 @@ namespace Хакатон.ApplicationData
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Role> Role { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<ABuidingInfo> ABuidingInfo { get; set; }
+        public virtual DbSet<ABuilding> ABuilding { get; set; }
+        public virtual DbSet<AJournal> AJournal { get; set; }
+        public virtual DbSet<AJournalViolations> AJournalViolations { get; set; }
+        public virtual DbSet<AUser> AUser { get; set; }
+        public virtual DbSet<AWorkJournal> AWorkJournal { get; set; }
     }
 }

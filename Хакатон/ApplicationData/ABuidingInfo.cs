@@ -12,12 +12,9 @@ namespace Хакатон.ApplicationData
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class ABuidingInfo
     {
-        public int ID { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public int idRole { get; set; }
-        public string Name { get; set; }
+        public byte[] BuildingPic { get; set; }
+        public string BuildingInfo { get; set; }
     }
 }
